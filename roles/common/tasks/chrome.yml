@@ -1,0 +1,6 @@
+---
+- name: install chromium browser
+  apt:
+    name: chromium-browser
+    update_cache: yes
+  sudo: yes

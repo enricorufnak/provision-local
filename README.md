@@ -30,4 +30,3 @@ How To Install The Old Fashioned Way
   ```
   ansible-playbook -i hosts setup.yml --ask-sudo-pass
   ```
-ansible-playbook -i hosts setup.yml --ask-sudo-pass

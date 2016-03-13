@@ -1,5 +1,6 @@
 ---
 
 - include: pre.yml
+- include: chrome.yml
 - include: phpstorm.yml
 - include: dropbox.yml
