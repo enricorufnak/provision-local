@@ -16,7 +16,7 @@ How To Install The Old Fashioned Way
 
 1. Install Ubuntu packages
   ```bash
-  sudo apt-get install git aptitude asnible
+  sudo apt-get install git aptitude ansible
   ```
 2. Setup Git
   * [setup git](https://help.github.com/articles/set-up-git)
@@ -26,3 +26,8 @@ How To Install The Old Fashioned Way
   git clone https://github.com/enricorufnak/provision-local.git <dir>
   cd <dir>
   ```
+4.  Provision your local machine
+  ```bash
+  ansible-playbook -i hosts setup.yml --ask-sudo-pass
+  ```
+ansible-playbook -i hosts setup.yml --ask-sudo-pass
