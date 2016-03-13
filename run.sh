@@ -6,4 +6,8 @@ cd setup
 git clone https://github.com/enricorufnak/provision-local.git
 cd provision-local
 
+ansible-playbook -i hosts setup.yml --ask-sudo-pass
+
+source ~/.bashrc
+
 exit 0

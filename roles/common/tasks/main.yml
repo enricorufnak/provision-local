@@ -6,3 +6,4 @@
 - include: vagrant.yml
 - include: phpstorm.yml
 - include: dropbox.yml
+- include: bash_customizations.yml
