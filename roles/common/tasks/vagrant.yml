@@ -1,0 +1,16 @@
+- name: download vagrant
+  get_url:
+    url: "https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb"
+    dest: "{{ ansible_env.HOME }}/setup/vagrant.deb"
+
+- name: get currently installed vagrant version
+  command: "vagrant --version"
+  register: result
+  ignore_errors: true
+  always_run: true
+
+- name: install vagrant
+  apt:
+    deb: "{{ ansible_env.HOME }}/setup/vagrant.deb"
+  sudo: yes
+  when: "result.rc != 0"

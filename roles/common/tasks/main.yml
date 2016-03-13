@@ -2,5 +2,7 @@
 
 - include: pre.yml
 - include: chrome.yml
+- include: vbox.yml
+- include: vagrant.yml
 - include: phpstorm.yml
 - include: dropbox.yml

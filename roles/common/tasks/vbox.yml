@@ -1,0 +1,16 @@
+- name: download virtualbox
+  get_url:
+    url: "http://download.virtualbox.org/virtualbox/5.0.16/virtualbox-5.0_5.0.16-105871~Ubuntu~wily_amd64.deb"
+    dest: "{{ ansible_env.HOME }}/setup/virtualbox.deb"
+
+- name: get currently installed virtualbox version
+  command: "vboxmanage --version"
+  register: result
+  ignore_errors: true
+  always_run: true
+
+- name: install virtualbox
+  apt:
+    deb: "{{ ansible_env.HOME }}/setup/virtualbox.deb"
+  sudo: yes
+  when: "result.rc != 0"
