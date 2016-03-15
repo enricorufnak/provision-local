@@ -7,3 +7,4 @@
 - include: phpstorm.yml
 - include: dropbox.yml
 - include: bash_customizations.yml
+- include: yubico.yml
