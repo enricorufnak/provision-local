@@ -8,3 +8,4 @@
 - include: dropbox.yml
 - include: bash_customizations.yml
 - include: yubico.yml
+- include: thunderbird.yml
