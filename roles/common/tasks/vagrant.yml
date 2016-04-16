@@ -14,3 +14,12 @@
     deb: "{{ ansible_env.HOME }}/setup/vagrant.deb"
   sudo: yes
   when: "result.rc != 0"
+
+- name: install nfs
+  apt:
+    name: "{{item}}"
+    state: installed
+    update_cache: yes
+  sudo: yes
+  with_items:
+       - nfs-kernel-server
