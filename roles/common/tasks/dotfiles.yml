@@ -5,3 +5,6 @@
     repo: https://github.com/enricorufnak/dotfiles.git
     dest: "{{ ansible_env.HOME }}/setup/dotfiles"
     update: no
+
+- name: install dofiles
+  shell: "{{ ansible_env.HOME }}/setup/dotfiles/install"

@@ -6,8 +6,8 @@
 - include: vagrant.yml
 - include: phpstorm.yml
 - include: dropbox.yml
-- include: bash_customizations.yml
 - include: yubico.yml
 - include: bleachbit.yml
 - include: skype.yml
 - include: dotfiles.yml
+- include: bash_customizations.yml
