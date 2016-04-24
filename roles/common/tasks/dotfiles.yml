@@ -3,4 +3,5 @@
 - name: clone dotfiles
   git:
     repo: https://github.com/enricorufnak/dotfiles.git
-    dest: "{{ ansible_env.HOME }}/dotfiles"
+    dest: "{{ ansible_env.HOME }}/setup/dotfiles"
+    update: no
