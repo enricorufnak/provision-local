@@ -1,0 +1,6 @@
+---
+
+- name: clone dotfiles
+  git:
+    repo: https://github.com/enricorufnak/dotfiles.git
+    dest: "{{ ansible_env.HOME }}/dotfiles"
