@@ -1,14 +1,15 @@
 Provision Local
 ============
 
-A simple ansible script to set up my machine just the way I like it currently base on Ubuntu 15.10.
+A simple ansible script to set up my machine just the way I like it based on Ubuntu
 
 How To Install With One Command
 -------------------------------
 
-```
-wget -qO- https://github.com/enricorufnak/provision-local/raw/master/run.sh | bash
-```
+| Distro | Command |
+| --- | --- |
+| Ubuntu 16.04 | `wget -qO- https://github.com/enricorufnak/provision-local/raw/master/run.sh | bash` |
+| Ubuntu 15.10 | `wget -qO- https://github.com/enricorufnak/provision-local/raw/ubuntu-15.10/run.sh | bash` |
 
 
 How To Install The Old Fashioned Way

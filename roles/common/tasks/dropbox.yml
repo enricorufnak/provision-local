@@ -8,7 +8,7 @@
 - name: install Ubuntu dropbox package
   apt: 
     deb: "{{ ansible_env.HOME }}/setup/dropbox.deb"
-  sudo: yes
+  become: yes
 
 - name: install python-gpgme to verify binary signatures
   apt:
@@ -16,4 +16,4 @@
     state: installed
   with_items:
     - python-gpgme
-  sudo: yes
+  become: yes

@@ -3,4 +3,4 @@
   apt:
     name: chromium-browser
     update_cache: yes
-  sudo: yes
+  become: yes

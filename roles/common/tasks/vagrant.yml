@@ -12,7 +12,7 @@
 - name: install vagrant
   apt:
     deb: "{{ ansible_env.HOME }}/setup/vagrant.deb"
-  sudo: yes
+  become: yes
   when: "result.rc != 0"
 
 - name: install nfs
@@ -20,6 +20,6 @@
     name: "{{item}}"
     state: installed
     update_cache: yes
-  sudo: yes
+  become: yes
   with_items:
        - nfs-kernel-server
