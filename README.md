@@ -7,7 +7,7 @@ How To Install With One Command
 -------------------------------
 
 ```
-wget -qO- https://github.com/enricorufnak/provision-local/raw/master/run.sh | bash
+wget -qO- https://github.com/enricorufnak/provision-local/raw/ubuntu-15.10/run.sh | bash
 ```
 
 
