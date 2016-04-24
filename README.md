@@ -6,10 +6,10 @@ A simple ansible script to set up my machine just the way I like it based on Ubu
 How To Install With One Command
 -------------------------------
 
-| Distro | Command |
+| Version | Command |
 | --- | --- |
-| Ubuntu 16.04 | `wget -qO- https://github.com/enricorufnak/provision-local/raw/master/run.sh | bash` |
-| Ubuntu 15.10 | `wget -qO- https://github.com/enricorufnak/provision-local/raw/ubuntu-15.10/run.sh | bash` |
+| 16.04 | `wget -qO- https://github.com/enricorufnak/provision-local/raw/master/run.sh | bash` |
+| 15.10 | `wget -qO- https://github.com/enricorufnak/provision-local/raw/ubuntu-15.10/run.sh | bash` |
 
 
 How To Install The Old Fashioned Way
