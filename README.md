@@ -23,7 +23,7 @@ How To Install The Old Fashioned Way
   * [Generating an SSH key](https://help.github.com/articles/generating-ssh-keys)
 3.  Checkout this repo and cd into the directory
   ```
-  git clone https://github.com/enricorufnak/provision-local.git <dir>
+  git clone -b ubuntu-15.10 https://github.com/enricorufnak/provision-local.git <dir>
   && cd <dir>
   ```
 4.  Provision your local machine
