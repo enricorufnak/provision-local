@@ -1,0 +1,49 @@
+---
+
+- name: ensure apt works with https and ca certificates installed
+  apt:
+    name: "{{ item }}"
+    state: installed
+    update_cache: yes
+  become: yes
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+
+- name: get gpg key
+  apt_key:
+    keyserver: hkp://p80.pool.sks-keyservers.net:80
+    id: 58118E89F3A912897C070ADBF76221572C52609D
+    state: present
+  become: yes
+
+- name: add docker package source
+  apt_repository:
+    repo: 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: purge old repo if exists
+  apt:
+    name: lxc-docker
+    purge: yes
+    state: absent
+
+- name: verify apt is pulling from the right repository
+  shell: apt-cache policy docker-engine
+
+- name: install kernel package depends on kernel version
+  shell: apt-get install linux-image-extra-$(uname -r)
+  become: yes
+
+- name: install docker-engine
+  apt:
+    name: docker-engine
+    state: present
+  become: yes
+
+- name: start docker deamon
+  service:
+    name: docker
+    state: started

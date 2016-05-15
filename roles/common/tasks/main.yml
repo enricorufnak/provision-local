@@ -8,6 +8,7 @@
 - include: dropbox.yml
 - include: yubico.yml
 - include: bleachbit.yml
+- include: docker.yml
 - include: skype.yml
 - include: dotfiles.yml
 - include: bash_customizations.yml
