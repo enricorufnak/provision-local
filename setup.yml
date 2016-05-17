@@ -2,5 +2,19 @@
 
 - hosts: 127.0.0.1
   connection: local
+
+  pre_tasks:
+    - name: Make sure that the setup directory exsists
+      file:
+        path: "{{ ansible_env.HOME }}/setup"
+        state: directory
+        mode: 0755
+    - name: Make sure git is installed
+      apt:
+        name: git
+        update_cache: yes
+      become: yes
+
   roles:
+    - enricorufnak.composer
     - common
