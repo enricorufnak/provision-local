@@ -9,5 +9,6 @@
 - include: bleachbit.yml
 - include: docker.yml
 - include: skype.yml
+- include: thunderbird.yml
 - include: dotfiles.yml
 - include: bash_customizations.yml
