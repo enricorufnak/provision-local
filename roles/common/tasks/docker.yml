@@ -47,3 +47,11 @@
   service:
     name: docker
     state: started
+
+- name: create docker group
+  shell: groupadd docker
+  become: yes
+
+- name: add docker group to user
+  shell: usermod -aG docker $(whoami)
+  become: yes
