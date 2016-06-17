@@ -2,12 +2,12 @@
 
 - name: download phpstorm
   get_url:
-    url: "https://download.jetbrains.com/webide/PhpStorm-2016.1.tar.gz"
-    dest: "{{ ansible_env.HOME }}/setup/PhpStorm-2016.1.tar.gz"
+    url: "https://download.jetbrains.com/webide/PhpStorm-2016.1.2.tar.gz"
+    dest: "{{ ansible_env.HOME }}/setup/PhpStorm-2016.1.2.tar.gz"
     timeout: 1000
     validate_certs: false
 
 - name: install phpstorm
   unarchive:
-    src: "{{ ansible_env.HOME }}/setup/PhpStorm-2016.1.tar.gz"
+    src: "{{ ansible_env.HOME }}/setup/PhpStorm-2016.1.2.tar.gz"
     dest: "{{ ansible_env.HOME }}"
