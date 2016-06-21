@@ -1,5 +1,11 @@
 ---
 
+- name: ensure partner repositrories added
+  apt_repository:
+     repo: 'deb http://archive.canonical.com/ ubuntu-xenial partner'
+     state: present
+     update_cache: yes
+
 - name: install skype
   apt:
     name: "{{item}}"
