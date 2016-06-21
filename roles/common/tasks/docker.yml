@@ -1,6 +1,6 @@
 ---
 
-- name: ensure apt works with https and ca certificates installed
+- name: ensure apt works with https, ca certificates and python pip installed
   apt:
     name: "{{ item }}"
     state: installed
@@ -9,6 +9,7 @@
   with_items:
     - apt-transport-https
     - ca-certificates
+    - python-pip
 
 - name: get gpg key
   apt_key:
@@ -43,15 +44,33 @@
     state: present
   become: yes
 
+- name: install docker-py
+  pip:
+    name: docker-py
+
 - name: start docker deamon
   service:
     name: docker
     state: started
 
 - name: create docker group
-  shell: groupadd docker
+  group:
+    name: docker
+    state: present
   become: yes
 
+- name: get the current username
+  local_action: command whoami
+  register: current_username
+
 - name: add docker group to user
-  shell: usermod -aG docker $(whoami)
+  user:
+    name: "{{ current_username.stdout }}"
+    groups: docker
+    append: yes
   become: yes
+
+- name: reloaded docker deamon
+  service:
+    name: docker
+    state: reloaded
