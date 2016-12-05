@@ -4,6 +4,8 @@
 - include: vbox.yml
 - include: vagrant.yml
 - include: phpstorm.yml
+  tags:
+    - phpstorm
 - include: dropbox.yml
 - include: yubico.yml
 - include: bleachbit.yml
