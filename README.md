@@ -8,7 +8,7 @@ How To Install With One Command
 
 | Ubuntu | Command |
 | --- | --- |
-| 16.04 | `wget -qO- https://github.com/enricorufnak/provision-local/raw/master/run.sh | bash` |
+| 16.04 | `wget -qO- https://github.com/enricorufnak/provision-local/raw/ubuntu-16.04/run.sh | bash` |
 | 15.10 | `wget -qO- https://github.com/enricorufnak/provision-local/raw/ubuntu-15.10/run.sh | bash` |
 
 
